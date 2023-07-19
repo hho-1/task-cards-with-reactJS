@@ -12,6 +12,9 @@
 .form-container{
     width: 450px;
 }
+.form-update{
+    width: 100%;
+}
 .taskForm{
     display: flex;
     flex-direction: column;
@@ -37,8 +40,21 @@ textarea{
     border: 1px solid green;
     cursor: pointer;
 }
+.updateButton{
+    background-color: blueviolet;
+    padding: 10px 0px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
 .createButton:hover{
     background-color: rgb(3, 146, 3);
+    letter-spacing: .05rem;
+}
+.updateButton:hover{
+    background-color: rgb(150, 75, 220);
     letter-spacing: .05rem;
 }
 .task-list{
