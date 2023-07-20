@@ -19,20 +19,24 @@ const TaskShow = ({task, onDelete, onUpdate}) => {
   return (
     <div className='task-show'>
 
-        {showEdit ? (<TaskCreate task={task} taskFormUpdate = {true} onUpdate={handleSubmit}/>) : (
-          <div>
-            <h3 className='task-title'>Task:</h3>
-            <p>{task.title}</p>
-
-            <h3>Description:</h3>
-            <p className='desc-text'>{task.desc}</p>
-
+        {showEdit ? 
+          (<TaskCreate task={task} taskFormUpdate = {true} onUpdate={handleSubmit}/>) 
+          : 
+          (
             <div>
-              <button onClick={handledeleteClick} className='btn-sil'>Delete</button>
-              <button onClick={handleEditClick}  className='btn-edit'>Edit</button>
-            </div>
+              <h3 className='task-title'>Task:</h3>
+              <p>{task.title}</p>
 
-          </div>)
+              <h3>Description:</h3>
+              <p className='desc-text'>{task.desc}</p>
+
+              <div>
+                <button onClick={handledeleteClick} className='btn-sil'>Delete</button>
+                <button onClick={handleEditClick}  className='btn-edit'>Edit</button>
+              </div>
+
+            </div>
+          )
         }
     </div>
   )
